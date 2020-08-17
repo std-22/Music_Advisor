@@ -1,0 +1,15 @@
+[1;31m
+Start test 1[0m
+> auth
++use this link to request the access code:
+ƒhttp://127.0.0.1:45678/authorize?client_id=2294e9f9c8014a5eb339287fb04cd7d5&redirect_uri=http://localhost:8080&response_type=code
+waiting for code...
+@Tester: making requests to redirect uri: http://localhost:8080
+*Not found authorization code. Try again.
+BTester: done request 1: Not found authorization code. Try again.
+*Not found authorization code. Try again.
+BTester: done request 2: Not found authorization code. Try again.
+Auth code: 123123
+,Got the code. Return back to your program.
+DTester: done request 3: Got the code. Return back to your program.
+)making http request for access_token...

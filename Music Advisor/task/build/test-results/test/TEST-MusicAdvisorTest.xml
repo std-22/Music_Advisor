@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MusicAdvisorTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-08-11T17:34:52" hostname="DESKTOP-1JL45T4" time="15.285">
+  <properties/>
+  <testcase name="start" classname="MusicAdvisorTest" time="15.285">
+    <failure message="java.lang.AssertionError: Exception in test #1&#10;&#10;java.lang.NullPointerException&#13;&#10;&#9;at advisor.Controller.getAccessToken(Controller.java:76)&#13;&#10;&#9;at advisor.Main.main(Main.java:56)&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Arguments: -access http://127.0.0.1:45678 -resource http://127.0.0.1:56789 -page 1&#10;&#10;&gt; auth&#10;use this link to request the access code:&#10;http://127.0.0.1:45678/authorize?client_id=2294e9f9c8014a5eb339287fb04cd7d5&amp;redirect_uri=http://localhost:8080&amp;response_type=code&#10;waiting for code...&#10;Tester: making requests to redirect uri: http://localhost:8080&#10;Not found authorization code. Try again.&#10;Tester: done request 1: Not found authorization code. Try again.&#10;Not found authorization code. Try again.&#10;Tester: done request 2: Not found authorization code. Try again.&#10;Auth code: 123123&#10;Got the code. Return back to your program.&#10;Tester: done request 3: Got the code. Return back to your program.&#10;making http request for access_token..." type="java.lang.AssertionError">java.lang.AssertionError: Exception in test #1
+
+java.lang.NullPointerException
+	at advisor.Controller.getAccessToken(Controller.java:76)
+	at advisor.Main.main(Main.java:56)
+
+Please find below the output of your program during this failed test.
+Note that the '&gt;' character indicates the beginning of the input line.
+
+---
+
+Arguments: -access http://127.0.0.1:45678 -resource http://127.0.0.1:56789 -page 1
+
+&gt; auth
+use this link to request the access code:
+http://127.0.0.1:45678/authorize?client_id=2294e9f9c8014a5eb339287fb04cd7d5&amp;redirect_uri=http://localhost:8080&amp;response_type=code
+waiting for code...
+Tester: making requests to redirect uri: http://localhost:8080
+Not found authorization code. Try again.
+Tester: done request 1: Not found authorization code. Try again.
+Not found authorization code. Try again.
+Tester: done request 2: Not found authorization code. Try again.
+Auth code: 123123
+Got the code. Return back to your program.
+Tester: done request 3: Got the code. Return back to your program.
+making http request for access_token...
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+> auth
+use this link to request the access code:
+http://127.0.0.1:45678/authorize?client_id=2294e9f9c8014a5eb339287fb04cd7d5&redirect_uri=http://localhost:8080&response_type=code
+waiting for code...
+Tester: making requests to redirect uri: http://localhost:8080
+Not found authorization code. Try again.
+Tester: done request 1: Not found authorization code. Try again.
+Not found authorization code. Try again.
+Tester: done request 2: Not found authorization code. Try again.
+Auth code: 123123
+Got the code. Return back to your program.
+Tester: done request 3: Got the code. Return back to your program.
+making http request for access_token...
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

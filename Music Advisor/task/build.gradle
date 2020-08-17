@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+group 'io.github.studio22.advisor'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+mainClassName = 'io.github.studio22.advisor.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:+'
+}
+
+jar {
+    manifest {
+        attributes('Main-Class': 'io.github.studio22.advisor.Main',
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+        )
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
