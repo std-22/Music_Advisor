@@ -6,9 +6,10 @@
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
         <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="WRAPPED" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="gradleHome" value="$USER_HOME$/Downloads/gradle-6.5.1-bin/gradle-6.5.1" />
+        <option name="gradleJvm" value="java version &quot;11.0.8+10&quot;" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />

@@ -32,21 +32,6 @@ subprojects {
         test.java.srcDir 'test'
     }
 
-    test {
-        systemProperty "file.encoding", "utf-8"
-        outputs.upToDateWhen { false }
-        afterTest { TestDescriptor test, TestResult result ->
-            if (result.resultType == TestResult.ResultType.FAILURE) {
-                def message = result.exception?.message ?: "Wrong answer"
-                def lines = message.readLines()
-                println "#educational_plugin FAILED + " + lines[0]
-                lines[1..-1].forEach { line ->
-                    println "#educational_plugin" + line
-                }
-            }
-        }
-    }
-
     compileJava.options.encoding = 'UTF-8'
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
@@ -54,5 +39,5 @@ subprojects {
 }
 
 wrapper {
-    gradleVersion = '5.3.1'
+    gradleVersion = '6.3'
 }

@@ -18,7 +18,7 @@ public class Server {
     private static final String REDIRECT_URL = "http://localhost:8080";
     private static final String CLIENT_ID = "2294e9f9c8014a5eb339287fb04cd7d5";
     private static final String GET_ACCESS_TOKEN_FROM_URL = "https://accounts.spotify.com/api/token";
-    private static final String CLIENT_SECRET = "e2fa85afc405428a8ec3da5deb323a8a";
+    private static final String CLIENT_SECRET = "1962202a1a424874bf1b889131ce2b44";
     private static final String REDIRECT_URL_IN_QUERY_STRING = "http%3A%2F%2Flocalhost%3A8080";
     private static String authCode = "";
     private static final String releasesURL = API_PATH + "v1/browse/new-releases";
